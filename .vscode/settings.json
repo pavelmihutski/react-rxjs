@@ -1,0 +1,21 @@
+{
+    "eslint.workingDirectories": [
+		"client"
+	  ],
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "remimarsal.prettier-now"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "remimarsal.prettier-now"
+	},
+
+	"prettier.singleQuote": true,
+	"prettier.printWidth": 100,
+	"prettier.arrowParens": true,
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": false,
+	"prettier.trailingComma": "all",
+	"editor.formatOnSave": true,
+
+	"prettier.requireConfig": true
+}

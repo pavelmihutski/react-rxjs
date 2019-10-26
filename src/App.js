@@ -1,14 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import Input from './components/Input/Input';
-import Pingpong from './containers/pinhpong';
-import store from './redux/store';
+import store from './store';
+
+import Sugg from './pages/suggestions';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Pingpong />
+        <Sugg />
+        {/* <Pingpong /> */}
         <Input />
       </div>
     </Provider>

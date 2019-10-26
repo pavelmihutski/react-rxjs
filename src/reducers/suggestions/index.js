@@ -1,23 +1,27 @@
 import { handleActions } from 'redux-actions';
 
-import actions from '../../actions';
+import {
+  suggestionGet,
+  suggestionGetSuccess,
+  suggestionGetFailure,
+} from '../../actions/suggestions';
 
 const defaultState = { fetchingSuggestions: false, errorMessage: null };
 
 export default handleActions(
   {
-    [actions.suggestionGet]: () => ({
+    [suggestionGet]: () => ({
       ...defaultState,
       fetchingSuggestions: true,
     }),
 
-    [actions.suggestionGetSuccess]: (state, { payload }) => ({
+    [suggestionGetSuccess]: (state, { payload }) => ({
       ...state,
       suggestions: payload,
       fetchingSuggestions: false,
     }),
 
-    [actions.suggestionGetFailure]: (state, { payload }) => ({
+    [suggestionGetFailure]: (state, { payload }) => ({
       ...state,
       errorMessage: payload,
       fetchingSuggestions: false,
